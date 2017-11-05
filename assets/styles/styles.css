@@ -1,0 +1,312 @@
+body {
+    background: #263238;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none !important;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#gamecontainer {
+    width: 640px;
+    height: 480px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+}
+
+.gamelayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+
+
+/* font */
+
+@font-face {
+    font-family: 'fnt_bold';
+    src: url('../font/weblysleekuisb.ttf');
+}
+
+@font-face {
+    font-family: 'fnt_normal';
+    src: url('../font/weblysleekuil.ttf');
+}
+
+#gamecontainer * {
+    font-family: "fnt_normal", Tahoma;
+}
+
+
+/* Game Starting Menu Screen */
+
+.cartoon_man {
+    position: absolute;
+    height: 450px;
+    bottom: 5px;
+    left: 80px;
+}
+
+#gamestartscreen .title {
+    text-align: center;
+    margin-top: 70px;
+    padding-left: 200px;
+}
+
+#gamestartscreen .title_alarm {
+    font-size: 24px;
+    line-height: 40px;
+    color: #ffefe7;
+    font-family: "fnt_bold", Tahoma;
+}
+
+#gamestartscreen .title_game {
+    font-size: 17px;
+    line-height: 40px;
+    color: #ffefe7;
+}
+
+#gamestartscreen .btn {
+    display: inline-block;
+    margin: 100px auto;
+    padding: 5px 15px;
+    font-size: 20px;
+    text-decoration: none;
+    outline: none;
+    color: #ffc19e;
+    background-color: #EB4841;
+    border-radius: 3px;
+    box-shadow: 0 0 0 -2px #FFB288, 0 0 0 -1px #EB4841;
+    border: none;
+    -webkit-transition: -webkit-box-shadow .3s;
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+}
+
+#gamestartscreen .btn:hover {
+    box-shadow: 0 0 0 2px #FFB288, 0 0 0 4px #EB4841;
+    -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+            transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+    -webkit-animation: gelatine 0.5s 1;
+            animation: gelatine 0.5s 1;
+}
+
+@-webkit-keyframes gelatine {
+    from,
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+    from,
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+}
+
+@keyframes gelatine {
+    from,
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+    from,
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    25% {
+        -webkit-transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        -webkit-transform: scale(1.1, 0.9);
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        -webkit-transform: scale(0.95, 1.05);
+        transform: scale(0.95, 1.05);
+    }
+}
+
+
+/* Loading Screen */
+
+#loadingscreen {
+    background: #263238;
+}
+
+#loadingmessage {
+    margin-top: 200px;
+    text-align: center;
+    height: 70px;
+    color: white;
+    background: url("../images/loader.gif") no-repeat center;
+    background-size: 30px 30px;
+    font: 12px Arial;
+}
+
+
+/* Game Area */
+
+#gamearea {
+    background-color: rgba(255, 0, 0, 0);
+    text-align: center;
+}
+
+.game_question {
+    font-size: 22px;
+    color: #FFEFE7;
+    margin-top: 120px;
+}
+
+.answer_area {
+    margin: 0 auto;
+    resize: none;
+    height: auto;
+    width: 300px;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 30px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    color: #263238;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    max-height: 200px;
+}
+
+.answer_area::-webkit-scrollbar {
+    display: none;
+}
+
+.answer_area::-webkit-input-placeholder {
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+}
+
+.answer_area:focus {
+    outline: none;
+}
+
+.answer_area:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.next {
+    cursor: pointer;
+    font-size: 12px;
+    color: #FFEFE7;
+}
+
+.next span {
+    background-color: #EB4841;
+    border-radius: 5px;
+    padding: 5px 10px;
+    -webkit-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;
+}
+
+.next span:hover {
+    background-color: #c53731;
+}
+
+.prev_answer {
+    display: none;
+}
+
+.end_answer {
+    display: none;
+}
+
+.game_result {
+    color: #FFEFE7;
+    width: 80%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.game_result .question {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.game_result .answer {
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+.game_result .question:before,
+.game_result .answer:before {
+    background-size: 16px 16px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    content: "";
+    position: relative;
+    top: 4px;
+}
+
+.game_result .question:before {
+    background-image: url('../images/alarm.png');
+}

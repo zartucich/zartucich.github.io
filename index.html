@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <title>Զարթուցիչ</title>
+        <script src="assets/js/wAudio.js" type="text/javascript"></script>
+        <script src="assets/js/game.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="assets/styles/styles.css" type="text/css" media="screen">
+        <link rel="shortcut icon" href="assets/images/al.ico">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="gamecontainer">
+
+                <div id="gamearea" class="gamelayer">
+                    <p class="game_question"></p>
+                    <p><textarea id="text" class="answer_area" placeholder=" "></textarea></p>
+                    <p class="next">
+                        <span class="prev_answer" onclick="game.questions_answers.prevAnswer()">Վերադառնալ</span>
+                        <span class="next_answer" onclick="game.questions_answers.nextAnswer()">Անցնել հաջորդ հարցին</span>
+                        <span class="end_answer" onclick="game.questions_answers.endAnswer()">Ավարտել</span>
+                    </p>
+                </div>
+
+                <div id="gamestartscreen" class="gamelayer">
+                    <img class='cartoon_man' src="assets/images/cartoon_man.png" alt="Գրիգոր Առաքելյան">
+                    <p class="title">
+                        <span class="title_alarm">Զարթուցիչ</span></br>
+                        <span class="title_game">Բացասական համոզմունքներ</span></br>
+                        <span class="btn" onclick="game.playGame()">Սկսել</span>
+                    </p>
+                </div>
+
+                <div id="loadingscreen" class="gamelayer">
+                    <div id="loadingmessage"></div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
